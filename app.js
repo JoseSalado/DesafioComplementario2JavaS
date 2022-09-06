@@ -27,21 +27,25 @@ function comprarProducto(){
         alert(`eligio : ${valorBuscado} , precio : $ ${resultado}`);
     }
     
-    opcion = prompt("Que desea realizar   \n 2 : Pagar Compra \n 3 : Salir ");
+    opcion = prompt("Que desea realizar  \n 1 : Realizar otra compra  \n 2 : Pagar Compra \n 3 : Salir ");
     
 }
 
 function finalizarCompra(){
+    let total = sorrentinos.reduce((acc, el) => acc + el.precio, 0 );
+    alert(`el total es ${total + 100} (incluye $100 de gastos de envio)`);
+}
+/*function finalizarCompra(){
     if(producto==="1"){
-        alert(`Compro : ${sorrentinos[0].sabor} , total a pagar : $ ${resultado + 100} , incluye gastos de envio`);
+        alert(`Compro : ${sorrentinos[0].sabor} , total a pagar : $ ${resultado + 100}  (incluye gastos de envio)`);
     }
     else if ( producto==="2"){
-        alert(`Compro : ${sorrentinos[1].sabor} , total a pagar : $ ${resultado + 100} , incluye gastos de envio`);
+        alert(`Compro : ${sorrentinos[1].sabor} , total a pagar : $ ${resultado + 100}  (incluye gastos de envio)`);
     }
     else if (producto==="3"){
-        alert(`Compro : ${sorrentinos[2].sabor} , total a pagar : $ ${resultado + 100} , incluye gastos de envio`);
+        alert(`Compro : ${sorrentinos[2].sabor} , total a pagar : $ ${resultado + 100}  (incluye gastos de envio)`);
     }
-}
+}*/
 
 
 
